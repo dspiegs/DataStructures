@@ -9,12 +9,17 @@ namespace DataStructures
 {
     public class HashTable<TKey, TValue>
     {
-        private int size;
+        private int size = 0;
         private int count;
 
         public int Count
         {
             get { return count; }
+        }
+
+        public int Size
+        {
+            get { return size; }
         }
 
         private class HashItem
@@ -51,8 +56,7 @@ namespace DataStructures
             }
 
             list.Add(new HashItem(key, value));
-            count++;
-            CheckForResize();            
+            Grow();
         }
 
         public TValue Get(TKey key)
@@ -99,9 +103,8 @@ namespace DataStructures
                 return false;
             }
 
-            list.Remove(item);
-            count--;
-            CheckForResize();
+            list.Remove(item);            
+            Shrink();
             return true;
         }
 
@@ -124,29 +127,40 @@ namespace DataStructures
             return false;
         }
 
-        private void CheckForResize()
+        private void Grow()
         {
-            if (count < size && count * 2 > size)
-            {                
+            count++;
+            if (size > count)
+            {
                 return;
             }
-            
-            Resize();
+
+            Resize(size*2);
         }
 
-        private void Resize()
+        private void Shrink()
+        {
+            count--;
+            if (size < count * 2)
+            {
+                return;
+            }
+
+            int newSize = size;
+            while (newSize > count * 2)
+            {
+                newSize /= 2;
+            }
+
+            Resize(newSize);
+        }      
+
+        private void Resize(int newSize)
         {
             List<HashItem>[] temp = hashItems;
 
-            if (count > size)
-            {
-                size *= 2;
-            }
-            else
-            {
-                size /= 2;
-            }
-
+            size = newSize;
+            count = 0;
             hashItems = new List<HashItem>[size];
 
             for (int i = 0; i < temp.Length; i++)
