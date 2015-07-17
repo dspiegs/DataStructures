@@ -101,6 +101,7 @@ namespace DataStructures
 
             list.Remove(item);
             count--;
+            CheckForResize();
             return true;
         }
 
