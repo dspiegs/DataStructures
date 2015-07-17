@@ -5,6 +5,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataStructures", "DataStruc
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataStructures.Test", "DataStructures.Test\DataStructures.Test.csproj", "{60EA9EBB-1EE9-4CFF-AB21-BF69462258EE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Algoritms", "Algoritms\Algoritms.csproj", "{65556ACF-DDC7-4DF4-BEC6-F6FE95BF726E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Algorithms.Test", "Algoritms.Test\Algorithms.Test.csproj", "{553DA385-0317-482B-99BE-2637141BC0F5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,6 +23,14 @@ Global
 		{60EA9EBB-1EE9-4CFF-AB21-BF69462258EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{60EA9EBB-1EE9-4CFF-AB21-BF69462258EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{60EA9EBB-1EE9-4CFF-AB21-BF69462258EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65556ACF-DDC7-4DF4-BEC6-F6FE95BF726E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65556ACF-DDC7-4DF4-BEC6-F6FE95BF726E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65556ACF-DDC7-4DF4-BEC6-F6FE95BF726E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65556ACF-DDC7-4DF4-BEC6-F6FE95BF726E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{553DA385-0317-482B-99BE-2637141BC0F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{553DA385-0317-482B-99BE-2637141BC0F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{553DA385-0317-482B-99BE-2637141BC0F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{553DA385-0317-482B-99BE-2637141BC0F5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
